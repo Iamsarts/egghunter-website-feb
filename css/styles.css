@@ -163,6 +163,7 @@ textarea:focus {
     }
 
     #menu nav {
+        font-family: 'Lobster', cursive;
         outline: 0px;
         font-size: 2.5rem;
         margin-top: 3px;
@@ -176,7 +177,7 @@ textarea:focus {
 
     #menu nav ul li {
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 3rem;
     }
 
     #portfolio ul li {
@@ -256,6 +257,11 @@ textarea:focus {
 
 #contribute {
     background-image: url(../img/a-pic-platform-calgary.jpg);
+    background-color: white;
+}
+
+#bios {
+    background-image: url(../img/a-pic-bow-building-calgary.jpg);
     background-color: white;
 }
 
@@ -417,7 +423,7 @@ footer {
 @media screen and (max-width: 56.25em) {
     .about {
     margin-top: 0rem;
-    position: relative;
+    position: initial;
     }
 }
 
@@ -708,7 +714,7 @@ footer {
 .contribute__photo--p2 {
     top: -1rem;
     transform: scale(1.3);
-    z-index: 100;
+    z-index: 50;
     }
   }
 
