@@ -888,7 +888,7 @@ footer {
 .btn,
 .btn:link,
 .btn:visited {
-    margin-top: .5rem;
+    margin-top: .7rem;
     text-transform: uppercase;
     text-decoration: none;
     padding: .5rem .8rem;
@@ -896,7 +896,7 @@ footer {
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
-    font-size: .7rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
 }
@@ -920,12 +920,12 @@ footer {
 }
 
 .btn--yellow {
-    background-color: rgb(244, 221, 8, .7);
+    background-color: rgb(244, 221, 8);
     color: #000000;
 }
 
 .btn--yellow::after {
-    background-color: rgb(244, 221, 8, .7);
+    background-color: rgb(244, 221, 8);
 }
 
 .btn::after {
