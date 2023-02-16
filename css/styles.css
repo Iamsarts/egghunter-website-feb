@@ -989,7 +989,7 @@ footer {
     margin-top: .2rem;
     margin-bottom: .1rem;
     background-color: rgb(244, 221, 8);
-    border: .1rem solid rgba(192, 192, 189, 0.5);
+    border: .14rem solid rgb(244, 221, 8);
 }
 
 @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
