@@ -207,7 +207,7 @@ textarea:focus {
 }
 
 .section article {
-    min-height: 20rem;
+    min-height: 5rem;
     background-image: linear-gradient(to right bottom, #010500c4, #0d0f0188);
     outline-offset: .5rem;
     outline: .1rem solid rgb(244, 221, 8, 0.7);
@@ -279,6 +279,7 @@ footer {
     font-size: 1.3rem;
     font-weight: 100;
     letter-spacing: .3rem;
+    margin-bottom: .4rem;
 }
 
 .header__text-box {
@@ -406,6 +407,82 @@ footer {
 .rows .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
   }
+
+/* start bios-rows */
+.bios-rows {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.bios-rows:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .bios-rows:not(:last-child) {
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .bios-rows {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+}
+
+.bios-rows::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bios-rows [class^="col-"] {
+    float: left;
+}
+
+.bios-rows [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .bios-rows [class^="col-"]:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .bios-rows [class^="col-"] {
+        width: 100% !important;
+    }
+}
+
+.bios-rows .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+}
+
+.bios-rows .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+}
+
+.bios-rows .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.bios-rows .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+}
+
+.bios-rows .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.bios-rows .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+/* end bios-rows */
 
 .paragraph {
     font-size: 1.6rem;
@@ -811,3 +888,127 @@ footer {
   }
 
         /* End Move In Left/Move In Right/Move In Bottom animation CSS */
+/* start button styles */
+.btn,
+.btn:link,
+.btn:visited {
+    margin-top: .5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5rem .8rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: .7rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--yellow {
+    background-color: rgb(244, 221, 8, .7);
+    color: #000000;
+}
+
+.btn--yellow::after {
+    background-color: rgb(244, 221, 8, .7);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+.btn-text:link,
+.btn-text:visited {
+    margin-top: .4rem;
+    font-family: 'Lobster', cursive;
+    font-size: 1rem;
+    color: rgb(244, 221, 8);
+    display: inline-block;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.btn-text:hover {
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(.2rem);
+}
+
+
+/* Start Bios Pictures CSS */
+.round-accent-pic {
+    outline: .1rem solid rgb(244, 221, 8, 0.7);
+    outline-offset: 1rem;
+    border-radius: .01px;
+}
+
+@media only screen and (max-width: 56.25em) {
+.round-accent-pic:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+}    
+
+.round-accent-pic__shape {
+    width: 4rem;
+    height: 4rem;
+    float: left;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: .5rem;
+    margin-top: .2rem;
+    margin-bottom: .1rem;
+    background-color: rgb(244, 221, 8);
+    border: .1rem solid rgba(192, 192, 189, 0.5);
+}
+
+@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .round-accent-pic__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none;
+    }
+}
+
+.team-bios__img {
+    height: 100%;   
+    backface-visibility: hidden;
+}
+/* End Bios Pictures CSS */
+
+/* start button styles */
