@@ -107,7 +107,6 @@ textarea:focus {
 #menu nav {
     /*box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-
     padding-left: 10px;
     border-radius: 25px;
     outline-offset: .5rem;
@@ -180,9 +179,6 @@ textarea:focus {
         padding-bottom: 3rem;
     }
 
-    #portfolio ul li {
-        width: 100%;
-    }
 }
 
 .section {
