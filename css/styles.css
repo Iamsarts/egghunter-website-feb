@@ -203,7 +203,7 @@ textarea:focus {
 
 .section article {
     min-height: 5rem;
-    background-image: linear-gradient(to right bottom, #010500c4, #0d0f0188);
+    background-image: linear-gradient(to right bottom, #010500, #0d0f01cb);
     outline-offset: .5rem;
     outline: .1rem solid rgb(244, 221, 8, 0.7);
     color: rgb(255, 255, 255);
@@ -1005,5 +1005,3 @@ footer {
     backface-visibility: hidden;
 }
 /* End Bios Pictures CSS */
-
-/* start button styles */
