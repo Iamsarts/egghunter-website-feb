@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    
 }
 
 body,
@@ -40,8 +40,8 @@ video {
 }
 
 .header-video-wrapper video {
-    position: absolute;
     z-index: -1;
+    position: absolute;
     width: auto;
     height: auto;
     top: 50%;
@@ -49,7 +49,6 @@ video {
     min-height: 100%;
     min-width: 100%;
     transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
 form {
@@ -987,7 +986,6 @@ footer {
     overflow: hidden;
     margin-right: .5rem;
     margin-top: .2rem;
-    margin-bottom: .1rem;
     background-color: rgb(244, 221, 8);
     border: .14rem solid rgb(244, 221, 8);
 }
