@@ -196,7 +196,7 @@ textarea:focus {
     background-color: rgba(0, 0, 0);
     padding: 5px;
     padding-left: 10px;
-    font-size: 2em;
+    font-size: 2rem;
     text-transform: uppercase;
     text-align: left;
 }
@@ -481,7 +481,7 @@ footer {
 /* end bios-rows */
 
 .paragraph {
-    font-size: 1.6rem;
+    font-size: .8rem;
   }
 
 .paragraph:not(:last-child) {
@@ -888,7 +888,8 @@ footer {
 .btn,
 .btn:link,
 .btn:visited {
-    margin-top: .7rem;
+    margin-top: 1.8rem;
+    margin-left: 0;
     text-transform: uppercase;
     text-decoration: none;
     padding: .5rem .8rem;
@@ -948,9 +949,7 @@ footer {
 
 .btn-text:link,
 .btn-text:visited {
-    margin-top: .4rem;
-    font-family: 'Lobster', cursive;
-    font-size: 1rem;
+    font-size: .8rem;
     color: rgb(244, 221, 8);
     display: inline-block;
     text-decoration: none;
@@ -984,8 +983,8 @@ footer {
     position: relative;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: .5rem;
-    margin-top: .2rem;
+    margin-right: .8rem;
+    margin-top: .1rem;
     background-color: rgb(244, 221, 8);
     border: .14rem solid rgb(244, 221, 8);
 }
