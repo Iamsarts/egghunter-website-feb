@@ -32,8 +32,23 @@ a:hover {
     background-attachment: fixed;
 }
 
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
 
+.bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+/*
 video {
     height: 100%;
     width: 100%;
@@ -49,7 +64,7 @@ video {
     min-height: 100%;
     min-width: 100%;
     transform: translate(-50%, -50%);
-}
+}*/
 
 form {
     margin: 0 auto;
@@ -110,7 +125,7 @@ textarea:focus {
     border-radius: 25px;
     outline-offset: .5rem;
     outline: .1rem solid rgb(244, 221, 8, 0.7);
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0);
     float: left;
 }
 
@@ -182,7 +197,6 @@ textarea:focus {
 
 .section {
     height: 100vh;
-    min-height: 800px;
     overflow: hidden;
     /*position: relative;*/
     background-size: cover;
@@ -191,19 +205,8 @@ textarea:focus {
 
 
 
-.section h2 {
-    color: rgb(244, 221, 8);
-    font-family: sans-serif;
-    font-weight: lighter;
-    background-color: rgba(0, 0, 0);
-    padding: 5px;
-    padding-left: 10px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: left;
-}
-
 .section article {
+    padding: 30px;
     min-height: 5rem;
     background-image: linear-gradient(to right bottom, #010500, #0d0f01ce);
     outline-offset: .5rem;
@@ -513,18 +516,11 @@ footer {
 }
 
 @media only screen and (max-width: 56.25em) {
-.about {
-    margin-top: 0rem;
-    position: relative;
-    }
-    
-.about__photo {
+    .about__photo {
     float: left;
     position: relative;
     width: 33.33333333%;
     }
-
-
 }
 
 .about__photo--p1 {
@@ -578,14 +574,21 @@ footer {
 
 /* composition group two: Features */
 .features {
-    margin-top: -8rem;
+    margin-top: -7rem;
     position: relative;
 }
 
+@media screen and (max-width: 56.25em) {
+    .features {
+        margin-top: 0rem;
+        position: initial;
+    }
+}
+
 .features__photo {
-    width: 44%;
+    width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    border-radius: 1.3rem;
+    border-radius: .01px;
     position: absolute;
     z-index: 10;
     transition: all .2s;
@@ -593,49 +596,48 @@ footer {
 }
 
 @media only screen and (max-width: 56.25em) {
-.features {
-    margin-top: -2rem;
-    position: relative;
-    }
-
-.features__photo {
-    float: left;
-    position: relative;
-    width: 33.33333333%;
+    .features__photo {
+        float: left;
+        position: relative;
+        width: 33.33333333%;
     }
 }
 
 .features__photo--p1 {
     left: 0;
+    top: -2rem;
 }
 
 @media only screen and (max-width: 56.25em) {
-.features__photo--p1 {
-    top: 0;
-    transform: scale(1.2);
+    .features__photo--p1 {
+        top: 0;
+        transform: scale(1.1);
     }
 }
 
 .features__photo--p2 {
     right: 0;
+    top: 2rem;
 }
 
 @media only screen and (max-width: 56.25em) {
-.features__photo--p2 {
-    
-    transform: scale(1.2);
-    z-index: 50;
+    .features__photo--p2 {
+        top: -1rem;
+        transform: scale(1.3);
+        z-index: 50;
     }
 }
 
 .features__photo--p3 {
-    right: 24%;
+    left: 20%;
+    top: 10rem;
 }
 
 @media only screen and (max-width: 56.25em) {
-.features__photo--p3 {
-    left: 0;
-    transform: scale(1.2);
+    .features__photo--p3 {
+        top: 1rem;
+        left: 0;
+        transform: scale(1.1);
     }
 }
 
@@ -646,7 +648,7 @@ footer {
     z-index: 20;
 }
 
-.features:hover .features__photo:not(:hover) {
+.features:hover .about__photo:not(:hover) {
     transform: scale(0.95);
 }
 
@@ -1007,11 +1009,14 @@ footer {
 }
 /* End Bios Pictures CSS */
 .section h2 {
+    margin-top: 10vh;
+    padding: 5px;/
+    /* clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);*/
+    color: rgb(244, 221, 8);
     letter-spacing: .7rem;
     font-family: 'Lobster', cursive;
-    margin-top: 70px;
     background-color: rgba(0, 0, 0, 0.8);
-    font-size: 4em;
+    font-size: 3.5em;
     text-transform: uppercase;
     text-align: center;
 }
@@ -1021,3 +1026,8 @@ footer {
         display: none;
     }
 }
+
+.section-title-shape {
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+}
+
